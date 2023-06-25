@@ -140,12 +140,23 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Alien_ship.cpp" />
     <ClCompile Include="animated_object.cpp" />
     <ClCompile Include="animated_textured.cpp" />
-    <ClCompile Include="enums.cpp" />
+    <ClCompile Include="audio.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="effects.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="enums.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="game.cpp" />
     <ClCompile Include="game_object.cpp" />
     <ClCompile Include="player_object.cpp" />
+    <ClCompile Include="Ship.cpp" />
+    <ClCompile Include="Shot.cpp" />
     <ClCompile Include="Space odyssey.cpp" />
     <ClCompile Include="sprites.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
@@ -162,11 +173,14 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Alien_ship.h" />
     <ClInclude Include="animated_object.h" />
     <ClInclude Include="animated_textured.h" />
     <ClInclude Include="game.h" />
     <ClInclude Include="game_object.h" />
     <ClInclude Include="player_object.h" />
+    <ClInclude Include="Ship.h" />
+    <ClInclude Include="Shot.h" />
     <ClInclude Include="textured_object.h" />
   </ItemGroup>
   <ItemGroup>

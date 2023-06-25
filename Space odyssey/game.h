@@ -3,6 +3,8 @@
 #include <allegro5/allegro_font.h>
 #include <allegro5/allegro_primitives.h>
 #include <iostream>
+#include "enums.cpp"
+
 #define KEY_SEEN	1
 #define KEY_RELEASED 2
 
@@ -10,6 +12,8 @@ class game
 {
 private:
 	long score;
+	int gameEvent;
+	int currentnpc;
 	static bool closed;
 	ALLEGRO_TIMER* timer;
 	ALLEGRO_EVENT_QUEUE* queue;
@@ -30,6 +34,8 @@ public:
 	ALLEGRO_BITMAP* get_buffer();
 	ALLEGRO_FONT* get_font();
 	bool is_closed();
+	int get_event();
+	int get_npc();
 
 	void set_score(long v);
 	void set_timer(ALLEGRO_TIMER* v);
@@ -38,6 +44,8 @@ public:
 	void set_buffer(ALLEGRO_BITMAP* v);
 	void set_font(ALLEGRO_FONT* v);
 	void set_closed(bool v);
+	void set_event(int v);
+	void set_npc(int v);
 
 	//initializes Allegro
 	void AllegroInit(int dWidth, int dHeight, int bWidth, int bHeight);
@@ -51,6 +59,10 @@ public:
 	static bool GetKeyStatus(int kc);
 
 	static void SetKey(bool Released, int kc);
+
+	void ClearEvent();
+
+	void Clearnpc();
 
 	//main state chain
 	void UpdateGame();

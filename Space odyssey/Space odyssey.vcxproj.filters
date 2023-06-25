@@ -45,6 +45,21 @@
     <ClCompile Include="utils.cpp">
       <Filter>File di origine</Filter>
     </ClCompile>
+    <ClCompile Include="Shot.cpp">
+      <Filter>File di origine</Filter>
+    </ClCompile>
+    <ClCompile Include="audio.cpp">
+      <Filter>File di origine</Filter>
+    </ClCompile>
+    <ClCompile Include="effects.cpp">
+      <Filter>File di origine</Filter>
+    </ClCompile>
+    <ClCompile Include="Alien_ship.cpp">
+      <Filter>File di origine</Filter>
+    </ClCompile>
+    <ClCompile Include="Ship.cpp">
+      <Filter>File di origine</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -75,6 +90,15 @@
       <Filter>File di intestazione</Filter>
     </ClInclude>
     <ClInclude Include="player_object.h">
+      <Filter>File di intestazione</Filter>
+    </ClInclude>
+    <ClInclude Include="Shot.h">
+      <Filter>File di intestazione</Filter>
+    </ClInclude>
+    <ClInclude Include="Ship.h">
+      <Filter>File di intestazione</Filter>
+    </ClInclude>
+    <ClInclude Include="Alien_ship.h">
       <Filter>File di intestazione</Filter>
     </ClInclude>
   </ItemGroup>

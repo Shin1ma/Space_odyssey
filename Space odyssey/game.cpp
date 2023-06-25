@@ -29,6 +29,9 @@ ALLEGRO_DISPLAY* game::get_display() { return display; }
 ALLEGRO_BITMAP* game::get_buffer() { return buffer; }
 ALLEGRO_FONT* game::get_font() { return font; }
 bool game::is_closed() { return closed; }
+int game::get_event() { return gameEvent; }
+int game::get_npc() { return currentnpc; }
+
 
 void game::set_score(long v) { score = v; }
 void game::set_timer(ALLEGRO_TIMER* v) { timer = v; }
@@ -37,7 +40,8 @@ void game::set_display(ALLEGRO_DISPLAY* v) { display = v; }
 void game::set_buffer(ALLEGRO_BITMAP* v) { buffer = v; }
 void game::set_font(ALLEGRO_FONT* v) { font = v; }
 void game::set_closed(bool v) { closed = v; }
-
+void game::set_event(int v) { gameEvent = v; }
+void game::set_npc(int v) { currentnpc = v; }
 
 void game::AllegroInit(int dWidth, int dHeight, int bWidth, int bHeight) {
 	if (!al_init()) throw std::runtime_error("allegro init failed");
@@ -107,6 +111,11 @@ void game::UpdateGame() {
 		closed = true;
 	}
 }
+
+
+void game::ClearEvent() { gameEvent = TOTAL + 1; }
+
+void game::Clearnpc() { currentnpc = NUMB + 1; }
 
 //destructor
 void game::Allegro_destroy() {

@@ -1,3 +1,5 @@
+#pragma once
+
 enum PRIMITIVES {
 	RECTANGLE,
 	LINE,
@@ -7,4 +9,31 @@ enum PRIMITIVES {
 	ELLIPSE,
 
 	NUM,
+};
+
+enum ATTACKS {
+	FIRST,
+	SECOND,
+	THIRD,
+
+	COUNT,
+};
+
+enum SHIPS {
+	LONE,
+	LTWO,
+	LTHREE,
+
+	NUMB,
+};
+
+enum EVENTS {
+	NPCLEFT,
+	NPCRIGHT,
+	NPCUP,
+	NPCDOWN,
+	NPCSHOOT,
+	NPCSTART,
+
+	TOTAL,
 };
